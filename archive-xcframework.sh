@@ -76,8 +76,4 @@ xcrun xcodebuild -quiet -create-xcframework \
 # - Copy the framework in a specific way: de-referencing symbolic links on purpose
 cp -rp "${OUTPUT_DIR}/Frameworks/${FWNAME}.xcframework" "${BASE_PWD}/Frameworks/"
 
-# Catalyst framework directory structure flattening
-# - Remove the catalyst framework "Versions" directory structure after symbolic link de-reference
-rm -rf "${BASE_PWD}/Frameworks/${FWNAME}.xcframework/ios-arm64_x86_64-maccatalyst/${FWNAME}.framework/Versions"
-
 rm -rf ${OUTPUT_DIR}
